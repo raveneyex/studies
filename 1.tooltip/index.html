@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>A Simple jQuery Plugin</title>
+    </head>
+    <body>
+        <h1>A Simple Tooltip Plugin</h1>
+
+        <p><span data-tooltip="Tooltip" class="tooltip">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non malesuada lacus. Sed eu nulla ac libero aliquet facilisis. Quisque eu magna quam. Cras in malesuada ipsum, mollis consequat lectus. Donec ut felis eget sapien mollis suscipit ullamcorper id tellus. Nunc maximus finibus nisl, eu consectetur nulla molestie et. Morbi sed fringilla augue. Maecenas sit amet iaculis dui, ut hendrerit magna. Nam ipsum mauris, ultrices a efficitur a, tristique congue elit. Proin quis justo posuere nibh faucibus porta nec ut nunc. Pellentesque at interdum magna.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci erat, dapibus at fermentum vel, venenatis vitae diam. Aliquam ut consectetur velit, vitae varius tellus. Suspendisse fermentum egestas velit, sed vulputate nulla vehicula ac. Phasellus ut massa fringilla dui porta cursus ut id augue. Curabitur purus tellus, tincidunt vel ullamcorper et, condimentum et orci. Duis faucibus, ligula eget efficitur feugiat, tellus elit pharetra ipsum, id tristique nibh nunc et turpis. Nunc placerat ullamcorper dictum. Nulla eleifend diam nec consequat rhoncus. Praesent in est elit. Duis laoreet posuere sem. Donec lacinia felis neque, ac pellentesque nisi euismod ac. In hac habitasse platea dictumst. Cras imperdiet, ipsum nec feugiat egestas, lacus nibh commodo mi, sit amet tincidunt dui purus at leo. Integer metus orci, placerat et aliquet nec, laoreet vel arcu.</p>
+
+        <p>Vestibulum porta tellus eget risus aliquet, nec efficitur magna ornare. Fusce quam dui, ultrices quis dapibus quis, tincidunt quis ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec porttitor, enim vitae fermentum ullamcorper, leo est rhoncus est, eget vehicula nulla odio id arcu. Phasellus eu imperdiet sapien. Aenean at lobortis velit. Sed dignissim mauris quam, a laoreet nisi vestibulum sed. Nulla eu pretium metus. Nullam quam ante, volutpat at sodales quis, aliquet nec diam. Sed at elementum orci, sed fermentum tortor.</p>
+
+        <p>Sed in sollicitudin metus, quis dignissim ligula. Sed sit amet purus massa. Vestibulum quis enim vel metus posuere feugiat. Nam id tortor tempus, facilisis ipsum vel, volutpat velit. Duis vestibulum erat vitae ultrices posuere. Morbi convallis odio vel diam bibendum, et volutpat ex <span class="tooltip" data-tooltip="WTF is this?">ultricies</span>. Etiam vel volutpat arcu, nec elementum enim. Duis elit purus, volutpat in ante nec, condimentum ultrices leo.</p>
+
+        <p>Etiam et nisl nec tellus porttitor cursus. Mauris lobortis quis eros ac pellentesque. Nulla eu rhoncus mi. Ut non dolor risus. Quisque pulvinar tortor in lacinia laoreet. Vestibulum tincidunt aliquet sem fringilla suscipit. Aliquam erat volutpat. Phasellus sollicitudin aliquet sem ultricies pretium. Fusce elementum blandit diam eget gravida. Suspendisse sed tempus nisi. Donec ac porttitor ante.</p>
+    </body>
+    <script src="../libs/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="plugin.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.tooltip').ravenTooltip();
+        });
+    </script>
+</html>
