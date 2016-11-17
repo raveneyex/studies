@@ -6,22 +6,27 @@
             backgroundColor: 'yellow'
         }, options);
 
+        //Tooltip holder.
         var tooltipHolder = $('#tooltip-holder');
 
+        //Create markup for tooltip holder if non-existing
         if (tooltipHolder.length === 0) {
             tooltipHolder =  $('<div/>', {
                 id: 'tooltip-holder',
                 class: 'tooltip-holder'
-            }).css({
-                position: 'absolute',
-                border: '1px solid black',
-                display: 'none',
-                backgroundColor: settings.backgroundColor,
-                padding: '5px',
-                textAlign: 'center'
             }).appendTo($('body'));
         }
+        //Set basic styles
+        tooltipHolder.css({
+            position: 'absolute',
+            border: '1px solid black',
+            display: 'none',
+            backgroundColor: settings.backgroundColor,
+            padding: '5px',
+            textAlign: 'center'
+        });
 
+        //Define handler for mouseIn
         var handleMouseEnter = function handleMouseEnter(ev) {
             var $element = $(ev.currentTarget);
             var position = $element.position();
@@ -35,15 +40,18 @@
                 }).show();
         }
 
-        var handleMouseLeave = function handleMouseEnter(ev) {
-            tooltipHolder.html(''); //Clean single tooltip.
-            tooltipHolder.hide();
+        //Define handler for mouseout
+        var handleMouseLeave = function handleMouseLeave(ev) {
+            tooltipHolder
+                .html('')
+                .hide();
         }
 
+        //For each element, define mouseenter & mouseleave events
         this.each(function (index, element) {
-            var $element = $(element);
-            $element.mouseenter(handleMouseEnter);
-            $element.mouseleave(handleMouseLeave);
+            $(element)
+                .mouseenter(handleMouseEnter.bind(this))
+                .mouseleave(handleMouseLeave.bind(this));
         });
     };
 })(jQuery);
