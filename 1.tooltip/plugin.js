@@ -14,9 +14,11 @@
                 class: 'tooltip-holder'
             }).css({
                 position: 'absolute',
+                border: '1px solid black',
                 display: 'none',
                 backgroundColor: settings.backgroundColor,
-                padding: '5px'
+                padding: '5px',
+                textAlign: 'center'
             }).appendTo($('body'));
         }
 
