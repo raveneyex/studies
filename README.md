@@ -7,7 +7,8 @@ The idea is to continually expand my knowledge while leaving behind useful code 
 
 1. YATP: Yet Another Tooltip Plugin
 
-### 1. YATP
+
+## 1. YATP
 Write a simple jQuery tooltip plugin. It should only be needed to invoque once, and it will automatically pickup the existing `data-tootilp`
 and use that for display.
 
